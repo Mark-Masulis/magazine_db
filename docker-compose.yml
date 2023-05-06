@@ -2,9 +2,10 @@ version: '3'
 services:
   mysql:
     image: mysql:latest
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: abc123
     volumes:
-      - ./myscript.sql:/docker-entrypoint-initdb.d/schema.sql
+      - ./myscript.sql:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
