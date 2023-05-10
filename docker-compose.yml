@@ -8,4 +8,4 @@ services:
     volumes:
       - ./myscript.sql:/docker-entrypoint-initdb.d
     ports:
-      - "3306:3306"
+      - "13306:3306"
