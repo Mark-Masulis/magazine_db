@@ -1,11 +1,21 @@
 version: '3'
 services:
-  mysql:
+  app:
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    stdin_open: true
+    tty: true
+    depends_on:
+      - mysqldb
+  mysqldb:
     image: mysql:latest
+    container_name: mysqldb
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: abc123
     volumes:
       - ./myscript.sql:/docker-entrypoint-initdb.d
     ports:
-      - "3306:3306"
+      - 3306:3306
