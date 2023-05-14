@@ -35,18 +35,6 @@ INSERT INTO WRITER
         (1, 'Jerry Lee', 'jerry-lee@yahoo.com', '4082222222'),
         (2, 'No Articles', 'this-writer-can-be-delete@gmail.com', '4083333333');
 
-INSERT INTO TOPIC
-    (TOPIC_NAME)
-    VALUES
-        ('NATURE'),
-        ('FOOD'),
-        ('ENTERTAINMENT'),
-        ('LIFESTYLE'),
-        ('SCIENCE'),
-        ('CURRENT EVENTS'),
-        ('POLITICS'),
-        ('INTERNATIONAL');
-
 INSERT INTO ARTICLE
     (WRITER_ID, ARTICLE_TITLE, ISSUE_NUMBER, SERIES_NAME, PUBLISHER_NAME)
     VALUES
